@@ -1,0 +1,858 @@
+*{
+	position: relative;
+}
+html,body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 100%;
+	height: 100%;
+	font-size:75%;	
+}
+body{
+	background-image: url(../images/bgimg.jpg);
+	background-size:150%;
+	background-repeat: no-repeat;
+	position: relative;	
+}
+#wapper{
+	margin: 0 0;
+}
+header{
+	margin: 0 0;
+}
+nav > h2{
+	display: none;
+}
+img{
+	    max-width: 100%;
+}
+.logo{
+	font-size: 5rem;
+	color: #993366;
+    margin-left: 5rem;
+    z-index: 999;
+}
+.current{
+	background-color: #a84057 !important;
+}
+.menu{
+	margin: 0;
+    padding: 0 5rem;
+    z-index: 999;
+}
+
+.menu>ul{	
+	display:flex;
+	/* justify-content: center; 會影響排版*/
+	padding-left: 0px;
+	/* background-color: #cc6858; */
+	margin: 0;
+    padding: 0;
+    list-style: none;
+
+}	
+.menu>ul>li{
+	background-color: #cc6858;
+	list-style-type:none;
+	line-height:5rem;
+	border-right: #993366 1px solid;
+
+	width: 16rem;
+
+	/* 因為選單的最左方都多出背景色，故把width擴大，並將上方的width縮成99%; */
+	height: 5rem;
+
+	font-size: 1rem;
+	font-family: Arial;
+
+    text-align: center;
+}
+.menu ul li:last-child {
+	border-right:none;
+}
+.menu ul li a{
+	color: white;
+	text-decoration: none
+}
+.menu ul li:hover{
+	background-color: #a84057;
+    transition: background-color 0.8s;
+}
+ .btn ul li:first-child{
+	/* background-color:#a84057; */
+} 
+.menu ul ul{
+	display: none;
+	color: white;
+ 	list-style-type:none;	
+    width: 100%;/* 這邊要用百分之百，才會跟著變 */
+    padding-left: 0;    
+    background-color:#cc6858;
+
+} 
+.menu ul ul>li{
+	
+	color: white;
+ 	list-style-type:none;	
+    width: 100%;/* 這邊要用百分之百，才會跟著變 */
+    padding-left: 0;    
+    background-color:#cc6858;
+
+} 
+.menu ul li:hover ul{
+	display: block;
+	color: white;
+ 	list-style-type:none;	
+    width: 100%;/* 這邊要用百分之百，才會跟著變 */
+    padding-left: 0;
+
+} 
+.menu ul ul:hover{
+	display: block;
+	color: white;
+ 	list-style-type:none;	
+    width: 16rem;
+    padding-left: 0;	
+	background-color: #a84057;
+}
+.con{
+	width: 100%;
+    z-index: 999;
+}
+
+.menufix{
+    position: fixed;
+	top: 0;
+    z-index: 999;  
+    background-color: #31353d;    
+    height: 3rem;
+    transition: all 0.5s ease;
+}
+.menutransition{
+	transition: all 0.5s ease;
+}
+/* .menu ul li ul:hover{
+/*
+ 	position: absolute;
+	padding-left: 0;
+	display: block;
+	font-size: 0.5rem;
+	font-family: Arial;
+
+    text-align: center;
+
+	color: white;
+
+ 	list-style-type:none;
+}  */
+
+/* .menu ul li ul:hover{
+ 	display: block;
+	background-color: #a84057;
+	
+}
+.menu ul li li:hover{
+ 	display: block;
+	background-color: #a84057;
+	
+} */
+#main{
+	height: auto;
+	padding: 0 auto;
+	margin-top: 15rem;
+	/* background-color: #fff; */
+}
+.headline{
+	font-size: 36px;
+	font-family: arial;
+	color: #993366;
+	margin-bottom: 21px;
+	margin-left: 50px;
+	border-bottom: #ececec 1px solid;
+}	
+.mainheadline{
+	font-size: 105px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: lighter;
+	width: auto; 
+	color: #a84057;
+	text-align: center;
+}
+.subheadline{
+	font-size: 50px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:100;
+	color: #a84057;
+	margin: 10px auto;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.mobile-select{ 
+	display: none;
+}	
+
+.more_btn{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    width: 120px;
+    background-color: #a84057;
+    color: #FFF;
+}
+
+.more_btn a{
+    color: #FFF;
+    text-decoration:none;
+}
+.more_btn a:link{
+    color: #FFF;
+    text-decoration:none;
+}
+.more_btn:hover{
+    background-color: #cc6858;
+    color: #FFF;
+    transition: all 0.5s ease;
+}
+
+.meg_section{
+	display: flex;
+	/* display: block; */
+	margin: 0rem;
+	padding: 0rem;
+	color: #FFF;
+	
+}
+.meg{
+	
+
+}
+.meg_top{
+	flex-basis: 20rem;
+	background-color:#cc6666;
+	padding: 2rem;
+    margin: 0rem 1.5rem;
+    text-align: center;
+}
+
+.meg_title{
+	font-size: 1.5rem;
+    color: #993333;
+    /* margin: 2rem auto; */
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition:all 0.1s ease-in;
+}
+
+.meg_title:hover{
+    color: black;
+}
+.meg_sub_title{
+	font-size: 1.2rem;
+    color: #FF9494;
+    margin-top: 0;
+    margin-bottom: 2rem;	
+    font-weight: 400;
+}
+.meg_bottom{
+	flex-basis: 20rem;
+	background-color:#f27b67;
+	padding: 0.05rem 2rem;
+    margin: 0 1.5rem;
+    width: 7rem;	
+}
+.meg_bottom:hover{
+    background-color: #a84057;
+    transition: all 0.5s ease;
+}
+
+.meg_more{
+	font-size: 1.2rem;
+	/* color: #fff; */
+}
+.meg_more a{
+	font-size: 1.2rem;
+	color: #fff;
+	text-decoration: none;
+}
+.submeg_section{
+	display: flex;
+	flex-basis: 20rem;
+    margin: 2rem;
+    padding: 3rem;
+    color: #FFF;
+}
+.sub_meg{
+	width: 33% ;
+}
+.alignleft{
+	float: left;
+	margin: 5px 20px 10px 0;
+}
+h2{
+    flex-shrink: 1;
+  
+    padding: 0rem 2rem;
+    margin: 0rem 1rem;
+    text-align: left;
+    font-size: 1.9rem;
+    color: #8b6d6b;
+}
+h3{
+    flex-shrink: 1;
+    padding: 2rem;
+    margin: 0rem 1rem;
+    text-align: center;
+    font-size: 0.5rem;
+    color: #cc6858;
+}
+p{
+	display: block;
+	margin-bottom: 15px;
+	color: black;
+	padding: 0 2rem;
+    margin: 0rem 1rem;
+}
+.box { 
+
+}
+
+.icon {
+    width: 8rem;
+    height: 8rem;
+    line-height: 8rem !important;
+    text-align: center;
+    background-color: #bc6051;
+    font-size: 5rem;
+    font-weight: normal;
+    color: #deb2a9;
+    float: none;
+    margin: 0 auto;
+    border-radius: 4rem;
+    border: none;
+    display: inline-block;
+    transform: rotateY(0deg);
+    -webkit-transform:rotate(0deg);
+}
+.icon:hover {
+    width: 8rem;
+    height: 8rem;
+    line-height: 8rem !important;
+    text-align: center;
+    background-color: #bc6051;
+    font-size: 5rem;
+    font-weight: normal;
+    color: #deb2a9;
+    float: none;
+    margin: 0 auto;
+    border-radius: 4rem;
+    border: none;
+    display: inline-block;
+    transform: rotate(0deg);
+    -webkit-transform:rotate(0deg);
+}
+footer{
+	color: #aba9aa;
+	font-family: 'Open Sans', sans-serif;
+	height: 2rem;
+}
+footer a{
+	color: #aba9aa;
+	text-decoration: none;
+}
+footer a:hover{
+	color: #cc6858;
+	text-decoration: none;
+}
+footer a storng{
+	color:#aba9aa;
+}
+.footer-menu{
+	margin: 0rem 2.5rem;
+    border-top: 1px solid #d0c5c3;
+    padding: 5rem 0rem 0rem 15rem;
+}
+.footer-box{
+    display: inline-block;
+    /* width: 100%; */
+    margin: 0px  -2rem;
+    padding-right: 10%;
+    vertical-align: top;
+}
+.footer-box>h3{
+	padding: 0;
+	font-size: 1.8rem;
+	color: #8b6d6b;
+	font-weight: 100;
+}
+.footer-box>ul {
+    list-style-type: none;
+    margin-left: -1.6rem;
+    margin-bottom: 3rem;
+}
+.social_li .social_ico{
+    margin-right: 8px;
+}
+.social_li .social_ico:before {
+    position: realtive;
+    font-family: 'FontAwesome';
+    font-size: 22px;
+    line-height: 26px;
+    speak: none;
+    color: #cc6858;
+}
+.social_ico {
+    display: inline-block;
+    vertical-align: top;
+}
+.social_link{
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+    display: inline-block;
+}
+.social_label {
+    color: #aba9aa;
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+}
+@media screen and (min-width:621px) and (max-width:768px)
+{
+
+	#wapper{
+		/* background-image: url(../images/cake-2459931_1920.jpg); */
+		width: 100%; 
+		background-repeat: no-repeat;
+		position: relative;	
+		margin: 0;
+		/* background-color: #333; */
+	}
+	.menu{
+
+	width:99%;
+    height:1rem;
+	margin: 0 auto 15rem auto;
+	z-index: 999;
+
+	}
+
+	.menu>ul{	
+		display:flex;
+		justify-content: center;
+		padding-left: 0px;
+		background-color: #cc6858;
+		margin: 0;
+	    padding: 0;
+	    list-style: none;
+
+	}	
+	.menu>ul>li{
+		
+		background-color: #333;
+		list-style-type:none;
+		line-height:5rem;
+		border-right: #993366 1px solid;
+
+		width: 10rem;
+
+		/* 因為選單的最左方都多出背景色，故把width擴大，並將上方的width縮成99%; */
+		height: 5rem;
+
+		font-size: 1rem;
+		font-family: Arial;
+
+	    text-align: center;
+	}
+
+}
+/*--------------------------ipad-----------------*/
+@media screen and (min-width:486px) and (max-width:620px)
+{ 
+
+	#wapper{
+		/* background-image: url(../images/cake-2459931_1920.jpg); */
+		width: 100%; 
+		background-repeat: no-repeat;
+		position: relative;	
+		margin: 0;
+		/* background-color: #333; */
+	}
+	.menu{
+
+	width:99%;
+    height:1rem;
+	margin: 0 auto 15rem auto;
+	z-index: 999;
+
+	}
+
+	.menu>ul{	
+		display:flex;
+		justify-content: center;
+		padding-left: 0px;
+		background-color: #cc6858;
+		margin: 0;
+	    padding: 0;
+	    list-style: none;
+
+	}	
+	.menu>ul>li{
+		
+		background-color:#FFDAB9;
+		list-style-type:none;
+		line-height:5rem;
+		border-right: #993366 1px solid;
+
+		width: 10rem;
+
+		/* 因為選單的最左方都多出背景色，故把width擴大，並將上方的width縮成99%; */
+		height: 5rem;
+
+		font-size: 1rem;
+		font-family: Arial;
+
+	    text-align: center;
+	}
+	.mainheadline{
+		padding-top: 1rem;
+		width: 80%;
+		font-size: 8rem;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: lighter;
+		width: auto; 
+		color: #a84057;
+		text-align: center;
+	}
+	.subheadline {
+	    font-size: 2rem;
+	    font-family: 'Open Sans', sans-serif;
+	    font-weight: 100;
+	    color: #a84057;
+	    margin: 1rem auto;
+	    margin-bottom: 50px;
+	    text-align: center;
+	}	
+	.meg_section{
+		/* width: 100%; */
+		display: block;
+
+		margin: 0rem;
+		padding: 0rem;
+		color: #FFF;		
+	}	
+	.meg_top{
+		width: 80%;
+  		margin: 0rem auto;
+	}
+	.meg_bottom{
+	    margin: 0.1rem 2.8rem  1.5rem;
+	}
+	.outmeg_more{
+		margin: 0 auto;
+	}
+	.sub_meg{
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+	.submeg_section{
+		display: inline-block;
+        flex-basis: 0rem;
+	    margin: 2rem;
+	    padding: 0rem;
+	    color: #FFF;
+	}
+	h2 {
+	    flex-shrink: 1;
+	    padding: 0rem;
+	    margin: 0rem 1rem 1rem 1rem;
+	    text-align: left;
+	    font-size: 1.9rem;
+	    color: #8b6d6b;
+	}	
+	h3 {
+	    flex-shrink: 1;
+	    padding: 0rem;
+	    margin: 0rem 1rem;
+	    text-align: left;
+	    font-size: 1rem;
+	    color: #cc6858;
+	} 
+	p {
+	    display: block;
+	    margin-bottom: 15px;
+	    color: #aba9aa;
+	    padding: 0 0 11.5px;
+	    margin: 0rem 1rem;
+	    font-size: 0.5rem;
+
+	}	
+	.meg_clear{
+	    margin-top: 3rem;		
+	}
+}
+/*--------------------------------------------------*/
+@media screen and (max-width:492px){/*我的手機*/
+#wapper{
+	/* background-image: url(../images/cake-2459931_1920.jpg); */
+	background-size:150%;
+	background-repeat: no-repeat;
+	position: relative;	
+	margin: 0;
+	/* background-color: #eee; */
+
+}	
+	.logo{
+		font-size: 4rem;
+		color: #993366;
+	    margin: 3rem 0;
+	    padding-left: 1rem;
+	    margin-left: -1rem;
+	    z-index: 999;		
+	}
+	.menu{
+		display: none;
+	}	
+	.mobile-select{ 
+		display: block;
+		width: 80%;
+		border: 1px solid #DDD;
+		background-color: #e4e4e4;
+		margin: 0 auto;
+		font-size: 1.5rem;
+		color: #993366;
+		cursor: pointer;
+	}	
+
+	.mainheadline{
+		padding-top: 1rem;
+		width: 80%;
+		font-size: 8rem;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: lighter;
+		width: auto; 
+		color: #a84057;
+		text-align: center;
+	}
+	.subheadline {
+	    font-size: 2rem;
+	    font-family: 'Open Sans', sans-serif;
+	    font-weight: 100;
+	    color: #a84057;
+	    margin: 1rem auto;
+	    margin-bottom: 50px;
+	    text-align: center;
+	}	
+	.meg_section{
+		/* width: 100%; */
+		display: block;
+
+		margin: 0rem;
+		padding: 0rem;
+		color: #FFF;		
+	}	
+	.meg_top{
+		width: 80%;
+  		margin: 0rem 2em;
+	}
+	.meg_bottom{
+	    margin: 0.1rem 2rem 1.5rem;
+	}
+	.sub_meg{
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+	.submeg_section{
+		display: inline-block;
+        flex-basis: 0rem;
+	    margin: 0rem;
+	    padding: 0rem;
+	    color: #FFF;
+	}
+	h2 {
+	    flex-shrink: 1;
+	    padding: 0rem;
+	    margin: 0rem 1rem 1rem 1rem;
+	    text-align: left;
+	    font-size: 1.9rem;
+	    color: #8b6d6b;
+	}	
+	h3 {
+	    flex-shrink: 1;
+	    padding: 0rem;
+	    margin: 0rem 1rem;
+	    text-align: left;
+	    font-size: 1rem;
+	    color: #cc6858;
+	} 
+	p {
+	    display: block;
+	    margin-bottom: 15px;
+	    color: #aba9aa;
+	    padding: 0 0 11.5px;
+	    margin: 0rem 1rem;
+	    font-size: 0.5rem;
+
+	}	
+	.meg_clear{
+	    margin-top: 85px;		
+	}
+}
+/*--------------------------------------------------*/
+@media screen and (max-width:412px){
+#wapper{
+	/* background-image: url(../images/cake-2459931_1920.jpg); */
+	background-size:150%;
+	background-repeat: no-repeat;
+	position: relative;	
+	margin: 0;
+
+}	
+#main {
+    height: auto;
+    padding: 0 auto;
+    /* background-color: #fff; */
+    margin-bottom: 4rem;
+}
+	.logo{
+    font-size: 3.5rem;
+    color: #993366;
+    margin: 3rem 0;
+    padding-left: 3.5rem;
+    margin-left: -1rem;
+    z-index: 999;	
+	}
+	.menu{
+		display: none;
+	}	
+	.mobile-select{ 
+		display: block;
+		width: 100%;
+		border: 1px solid #DDD;
+		background-color: #e4e4e4;
+		margin: 0 auto;
+		padding: 2rem;
+		font-size: 1.5rem;
+		color: #993366;
+		cursor: pointer;
+	}	
+
+	.mainheadline{
+		padding-top: 1rem;
+		width: 80%;
+		font-size: 8rem;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: lighter;
+		font-weight:bold;
+		width: auto; 
+		color: #a84057;
+		text-align: center;
+		font-weight: 600;
+	}
+	.subheadline {
+	    font-size: 2rem;
+	    font-family: 'Open Sans', sans-serif;
+	    font-weight: 100;
+	    color: #a84057;
+	    margin: 1rem auto;
+	    margin-bottom: 50px;
+	    text-align: center;
+	}	
+	.meg_section{
+		width: 100%;
+
+
+		margin: 0rem;
+		padding: 0rem;
+		color: #FFF;		
+	}	
+	.meg_top{
+
+		width: 84%;
+    	margin: 0rem 0.5rem;
+	}
+	.meg_bottom{
+	    margin: 0.01rem 0rem 1rem 0.5rem;	
+	}
+	.sub_meg{
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+	.submeg_section{
+		display: inline-block;
+        flex-basis: 0rem;
+	    margin: 0rem;
+	    padding: 0rem;
+	    color: #FFF;
+	}
+
+	h2 {
+	    flex-shrink: 1;
+	    padding: 0rem;
+	    margin: 0rem 1rem 1rem 1rem;
+	    text-align: left;
+	    font-size: 1.9rem;
+	    color: #8b6d6b;
+	}	
+	h3 {
+	    flex-shrink: 1;
+	    padding: 0rem;
+	    margin: 0rem 1rem;
+	    text-align: left;
+	    font-size: 1rem;
+	    color: #cc6858;
+	} 
+	p {
+	    display: block;
+	    margin-bottom: 15px;
+	    color: #aba9aa;
+	    padding: 0 0 11.5px;
+	    margin: 0rem 1rem;
+	    font-size: 0.5rem;
+
+	}	
+	.meg_clear{
+	    margin-top: 30px;
+	}
+	.footer-box {
+	    display: inline;
+	}
+	.footer-box>ul {
+	    list-style-type: none;
+	    margin-left: -1.6rem;
+	    margin-bottom: 3rem;
+	}
+	.footer-menu {
+	    margin: 0rem 0rem 0 0rem;
+	    border-top: 1px solid #d0c5c3;
+	    padding: 1.5rem 0rem 0rem 0rem;
+	}
+	.footer-box>h3 {
+    padding: 0;
+    font-size: 2rem;
+    color: #8b6d6b;
+    font-weight:bold;
+}
+	footer{
+	color: #aba9aa;
+	font-family: 'Open Sans', sans-serif;
+	height: 2rem;
+	}
+	footer a{
+		color: #aba9aa;
+		text-decoration: none;
+		font-size: 1.5rem;
+	}
+	footer a:hover{
+		color: #cc6858;
+		text-decoration: none;
+	}
+	footer a storng{
+		color:#aba9aa;
+	}
+}
