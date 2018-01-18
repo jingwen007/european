@@ -15,16 +15,14 @@ $(function () {
             console.log('固定');
             $(".menu>ul>li").height('3rem');//meun高度
             $(".menu>ul>li").css("line-height","3rem");
-            $(".top").css("display", "block"); 
            
         } 
-        else{
+        if (scrollVal <  menuheight){
             $('.menu').removeClass('menufix');
             $('.menu>ul>li').removeClass('menutransition');
             console.log('移除');
             console.log('menuheight'+menuheight);
              $(".menu>ul>li").removeAttr("style");
-             $(".top").css("display", "none"); 
         } 
     });
 
@@ -33,12 +31,6 @@ $(function () {
     }
     );
 
-      //top
-     $('.top').click(function(){
-        $("html,body").animate({scrollTop:0},900);
-        return false;
-    }
-    );
 
 });
 // $(function(){

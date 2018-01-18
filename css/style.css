@@ -22,6 +22,17 @@ body{
 header{
 	margin: 0 0;
 }
+.top{
+	position: fixed;
+	bottom:2rem;
+	right: 1rem;
+	z-index: 999;
+}
+.top a:link{
+	transition: 1s;
+	cursor: pointer;
+}
+
 nav > h2{
 	display: none;
 }
@@ -192,7 +203,30 @@ img{
 .mobile-select{ 
 	display: none;
 }	
-
+h2{
+    flex-shrink: 1;
+  
+    padding: 0rem 2rem;
+    margin: 0rem 1rem;
+    text-align: left;
+    font-size: 1.9rem;
+    color: #8b6d6b;
+}
+h3{
+    flex-shrink: 1;
+    padding: 2rem;
+    margin: 0rem 1rem;
+    text-align: center;
+    font-size: 0.5rem;
+    color: #cc6858;
+}
+p{
+	display: block;
+	margin-bottom: 15px;
+	color: black;
+	padding: 0 2rem;
+    margin: 0rem 1rem;
+}
 .more_btn{
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
@@ -293,30 +327,15 @@ img{
 	float: left;
 	margin: 5px 20px 10px 0;
 }
-h2{
-    flex-shrink: 1;
-  
-    padding: 0rem 2rem;
-    margin: 0rem 1rem;
-    text-align: left;
-    font-size: 1.9rem;
-    color: #8b6d6b;
-}
-h3{
-    flex-shrink: 1;
+.sub_meg > h3{
+	flex-shrink: 1;
     padding: 2rem;
     margin: 0rem 1rem;
-    text-align: center;
-    font-size: 0.5rem;
+    font-size: 1.3rem;
     color: #cc6858;
+    text-align: left;
 }
-p{
-	display: block;
-	margin-bottom: 15px;
-	color: black;
-	padding: 0 2rem;
-    margin: 0rem 1rem;
-}
+
 .box { 
 
 }
@@ -335,9 +354,55 @@ p{
     border-radius: 4rem;
     border: none;
     display: inline-block;
-    transform: rotateY(0deg);
-    -webkit-transform:rotate(0deg);
+    /* transform: rotateY(0deg); */
+    /* -webkit-transform:rotate(0deg); */
+    transition: all 0.6s ease;
+  	-webkit-transform-style: preserve-3d;
+  	transform-style: preserve-3d;
+
 }
+
+.card-container {
+  -webkit-perspective: 700;
+  -moz-perspective: 700;
+  perspective: 700;
+}
+.card {
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 50%;
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  color: #fff;
+  transition: all 0.6s ease;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  positon: relative;
+}
+
+.front , .back {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.card:hover {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
 .icon:hover {
     width: 8rem;
     height: 8rem;
@@ -346,7 +411,7 @@ p{
     background-color: #bc6051;
     font-size: 5rem;
     font-weight: normal;
-    color: #deb2a9;
+    color: #fff;
     float: none;
     margin: 0 auto;
     border-radius: 4rem;
@@ -354,6 +419,13 @@ p{
     display: inline-block;
     transform: rotate(0deg);
     -webkit-transform:rotate(0deg);
+}
+.service-box:hover{
+	color:#fff;
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	-o-transition:all 0.2s ease;
+	transition:all 0.2s ease;
 }
 footer{
 	color: #aba9aa;
@@ -394,12 +466,29 @@ footer a storng{
     margin-left: -1.6rem;
     margin-bottom: 3rem;
 }
+
+.icon1 {
+    display: inline-block;
+    width: 20px; height: 20px;
+    overflow: hidden;
+}
+.icon1-del {
+       background: #333 no-repeat center;
+}
+.icon1 > .icon1 {
+    position: relative;
+    left: -20px;
+    border-right: 20px solid transparent;
+    -webkit-filter: drop-shadow(20px 0);
+    filter: drop-shadow(20px 0);    
+}
 .social_li .social_ico{
     margin-right: 8px;
 }
 .social_li .social_ico:before {
     position: realtive;
     font-family: 'FontAwesome';
+    border-right: 20px solid transparent;
     font-size: 22px;
     line-height: 26px;
     speak: none;
@@ -422,6 +511,10 @@ footer a storng{
     vertical-align: top;
     text-transform: uppercase;
 }
+.social .social_link__facebook .social_ico:before {
+    content: "\f082";
+}
+
 @media screen and (min-width:621px) and (max-width:768px)
 {
 
@@ -567,31 +660,7 @@ footer a storng{
 	    padding: 0rem;
 	    color: #FFF;
 	}
-	h2 {
-	    flex-shrink: 1;
-	    padding: 0rem;
-	    margin: 0rem 1rem 1rem 1rem;
-	    text-align: left;
-	    font-size: 1.9rem;
-	    color: #8b6d6b;
-	}	
-	h3 {
-	    flex-shrink: 1;
-	    padding: 0rem;
-	    margin: 0rem 0.5rem;
-	    text-align: left;
-	    font-size: 1rem;
-	    color: #cc6858;
-	} 
-	p {
-	    display: block;
-	    margin-bottom: 15px;
-	    color: #aba9aa;
-	    padding: 0 0 11.5px;
-	    margin: 0rem 1rem;
-	    font-size: 0.5rem;
 
-	}	
 	.meg_clear{
 	    margin-top: 3rem;		
 	}
